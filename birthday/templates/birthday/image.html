@@ -1,0 +1,35 @@
+{% extends 'birthday/base.html' %}
+{% load staticfiles %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'assets/css/image.css' %}">
+{% endblock %}
+
+
+{% block body %}
+<div style="overflow-x:hidden;">
+    <h1 style="text-align:center; color: white;">
+    {% if year == "2012" %}
+        7
+    {% elif year == "2013" %}
+        0
+    {% elif year == "2014" %}
+        0
+    {% elif year == "2015" %}
+        5
+    {% elif year == "2016" %}
+        2
+    {% elif year == "2017" %}
+        8
+    {% endif %}
+    </h1>
+</div>
+
+<div style="display:flex; justify-content:center; align-items: center; width: 100vw; overflow-x:hidden;">
+    <img src="{% static 'assets/img/' %}{{ year }}.jpg" onError="this.onerror=null;this.src=&quot;{% static 'assets/img/noImage.png' %}&quot;;" />
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+{% endblock %}

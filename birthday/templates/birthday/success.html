@@ -1,0 +1,31 @@
+{% extends 'birthday/base.html' %}
+{% load staticfiles %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'assets/css/success.css' %}">
+{% endblock %}
+
+
+{% block body %}
+<div class="title">
+    <div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Correct!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12" style="display:flex; justify-content:center;">
+                <a href="{% url 'birthday:index' %}">Back</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<canvas id="c"></canvas>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{% static 'assets/js/success.js' %}"></script>
+{% endblock %}
